@@ -16,14 +16,6 @@ services:
       # - ./docker/db/data:/var/lib/mysql:rw
 ###< doctrine/doctrine-bundle ###
 
-  elasticsearch:
-    image: elasticsearch:7.17.6
-    environment:
-      discovery.type: single-node
-      xpack.security.enabled: 'false'
-    volumes:
-      - elasticsearch-data:/usr/share/elasticsearch/data
-
 volumes:
 ###> doctrine/doctrine-bundle ###
   db-data:
